@@ -4,6 +4,8 @@ library(tidyverse)
 library(readr)
 
 
+################UI
+
 ui <- fluidPage(
   # Application title
   titlePanel("Do FIP Assessments Evaluate Climate Resilience?"),
@@ -103,8 +105,9 @@ ui <- fluidPage(
 
 
 
+#####################SERVER note 2nd tab stuff is here before first tab but runs the same 
 
-
+# for Sankey diagram tab (2nd tab):
 server <- function(input, output, session) {
   # Read data for the Sankey plot
   links_df <- read_csv("p_links.csv", show_col_types = FALSE)
@@ -149,7 +152,7 @@ server <- function(input, output, session) {
     nodes <- data$nodes
     links <- data$links
     
-    # Create a named vector for mapping weight labels to colors
+    # Create a named vector for mapping weight labels to colors not used right now
     color_map <- c("Weak coverage" = "#E1AF00", "Medium coverage" = "#78B7C5", "Strong coverage" = "#3B9AB2")
     
     plot_ly(
@@ -168,13 +171,13 @@ server <- function(input, output, session) {
         target = links$target,
         value = links$weight
         #color = color_map[links$weight_label]  # Apply color based on weight_label
-        # Removed the custom hover text settings
+        #  custom hover text settings would go here if they worked
       )
     )
   })
   
   
-  # Load the data for the Attribute Coverage plot
+  # Load the data for the Attribute Coverage plot (first tab)
   coverage_df <- read_csv("coverage_plot.csv")
   
   
@@ -203,6 +206,8 @@ server <- function(input, output, session) {
                                  labels = c("Missing", "Weak coverage", "Medium coverage", "Strong coverage"))
       )
     
+    #the coverage plot
+    
     p <- ggplot(data, aes(x = assessment, y = attribute, fill = coverage_factor, text = hover_tile)) +
       geom_tile(color = "white", width = 0.3, height = 1) +
       scale_fill_manual(values = c("Missing" = "#F21A00", "Weak coverage" = "#E1AF00", "Medium coverage" = "#78B7C5", "Strong coverage" = "#3B9AB2")) +
@@ -217,7 +222,7 @@ server <- function(input, output, session) {
         axis.ticks.x = element_blank(),
         legend.position = "bottom"
       )
-    
+    #making it interactive
     ggplotly(p, tooltip = "text")
     
     
