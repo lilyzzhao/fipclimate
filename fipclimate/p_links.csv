@@ -1,0 +1,67 @@
+from,to,weight,weight_label
+ERA 1.1.1: Stock status outcome,Age structure,3,Strong coverage
+ERA 2.5.1: Ecosystem outcome,Ecosystem connectivity,1,Weak coverage
+ERA 2.4.1: Habitats outcome,Habitat diversity,1,Weak coverage
+ERA 2.4.2: Habitats management,Habitat diversity,1,Weak coverage
+ERA 1.1.1: Stock status outcome,Population abundance,3,Strong coverage
+ERA 2.2.1: Other species outcome,Species diversity,1,Weak coverage
+ERA 3.1.1: Legal and/or customary framework,Accountable,1,Weak coverage
+"ERA 3.2.4: Monitoring, management, performance evaluation",Accountable,1,Weak coverage
+"ERA 3.2.4: Monitoring, management, performance evaluation",Adaptive,1,Weak coverage
+SRA 1.1.5: Earnings and benefits,Adaptive,1,Weak coverage
+ERA 3.1.1: Legal and/or customary framework,Efficient and effective,2,Medium coverage
+"ERA 3.1.2: Consultation, roles, and responsibilities",Efficient and effective,1,Weak coverage
+ERA 3.2.3: Compliance and enforcement,Efficient and effective,2,Medium coverage
+SRA 2.1.2: Stakeholder participation and collaborative management,Equitable and inclusive,2,Medium coverage
+SRA 2.2.1: Equitable opportunity to benefit,Equitable and inclusive,2,Medium coverage
+SRA 3.1.3: Education,Equitable and inclusive,1,Weak coverage
+SRA 3.2.1: Benefits to and within community,Equitable and inclusive,2,Medium coverage
+SRA 3.2.2: Economic value retention,Equitable and inclusive,1,Weak coverage
+"ERA 3.1.2: Consultation, roles, and responsibilities",Participatory,3,Strong coverage
+SRA 2.1.2: Stakeholder participation and collaborative management,Participatory,3,Strong coverage
+SRA 1.2.1: Customary resource use rights,Participatory,3,Strong coverage
+"ERA 3.1.2: Consultation, roles, and responsibilities",Polycentric,2,Medium coverage
+ERA 1.2.1: Harvest strategy,Responsive,1,Weak coverage
+ERA 3.1.1: Legal and/or customary framework,Transparent,1,Weak coverage
+SRA 2.1.2: Stakeholder participation and collaborative management,Transparent,2,Medium coverage
+ERA 3.2.2: Decision-making processes,Transparent,2,Medium coverage
+SRA 1.1.5: Earnings and benefits,Access to economic opportunity,1,Weak coverage
+SRA 2.2.1: Equitable opportunity to benefit,Access to economic opportunity,2,Medium coverage
+SRA 3.2.1: Benefits to and within community,Access to economic opportunity,2,Medium coverage
+SRA 1.1.2a: Human trafficking and forced labor,Access to economic opportunity,1,Weak coverage
+SRA 3.2.4: Economic flexibility and autonomy,Access to economic opportunity,2,Medium coverage
+SRA 3.2.5: Livelihood security,Access to economic opportunity,3,Strong coverage
+SRA 2.1.2: Stakeholder participation and collaborative management,Access to knowledge,1,Weak coverage
+SRA 3.1.3: Education,Access to knowledge,2,Medium coverage
+ERA 3.2.2: Decision-making processes,Access to knowledge,2,Medium coverage
+SRA 3.2.5: Livelihood security,Access to knowledge,1,Weak coverage
+SRA 1.1.4: Freedom of association and collective bargaining,Access to knowledge,1,Weak coverage
+SRA 1.1.8: Occupational safety,Access to knowledge,1,Weak coverage
+SRA 1.1.2a: Human trafficking and forced labor,Agency,1,Weak coverage
+SRA 3.2.5: Livelihood security,Agency,1,Weak coverage
+SRA 1.1.4: Freedom of association and collective bargaining,Agency,2,Medium coverage
+SRA 1.1.1: Abuse and harassment,Agency,1,Weak coverage
+SRA 1.1.3: Child labor,Agency,1,Weak coverage
+SRA 1.1.7a: Access to basic services for live-aboard vessels,Agency,1,Weak coverage
+SRA 1.1.7b: Access to basic services for small-scale fisherfolk,Agency,1,Weak coverage
+SRA 2.2.2: Discrimination,Agency,1,Weak coverage
+SRA 3.1.2: Healthcare,Agency,1,Weak coverage
+"ERA 3.1.2: Consultation, roles, and responsibilities",Diversity of knowledge sources,2,Medium coverage
+ERA 1.2.3: Information and monitoring,Diversity of knowledge sources,1,Weak coverage
+ERA 1.2.4: Assessment of stock status,Diversity of knowledge sources,1,Weak coverage
+ERA 2.2.3: Other species information,Diversity of knowledge sources,1,Weak coverage
+ERA 2.3.3: ETP species information,Diversity of knowledge sources,1,Weak coverage
+ERA 2.4.3: Habitats information,Diversity of knowledge sources,1,Weak coverage
+ERA 2.5.3: Ecosystem information,Diversity of knowledge sources,1,Weak coverage
+SRA 3.2.4: Economic flexibility and autonomy,Economic diversity,2,Medium coverage
+SRA 3.1.3: Education,Learning capacity,1,Weak coverage
+SRA 1.1.2a: Human trafficking and forced labor,Mobility,2,Medium coverage
+SRA 1.1.7a: Access to basic services for live-aboard vessels,Mobility,1,Weak coverage
+SRA 2.1.2: Stakeholder participation and collaborative management,Social capital,1,Weak coverage
+SRA 1.1.4: Freedom of association and collective bargaining,Social capital,1,Weak coverage
+SRA 1.1.5: Earnings and benefits,Wealth and reserves,2,Medium coverage
+SRA 3.2.1: Benefits to and within community,Wealth and reserves,2,Medium coverage
+SRA 1.1.2a: Human trafficking and forced labor,Wealth and reserves,1,Weak coverage
+SRA 3.2.5: Livelihood security,Wealth and reserves,1,Weak coverage
+SRA 3.1.1a: Food and nutrition security impacts of industrial fisheries,Wealth and reserves,1,Weak coverage
+SRA 3.2.3: Long term profitability and future workforce,Wealth and reserves,1,Weak coverage

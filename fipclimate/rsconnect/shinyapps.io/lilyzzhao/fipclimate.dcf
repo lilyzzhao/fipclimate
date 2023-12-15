@@ -1,0 +1,12 @@
+name: fipclimate
+title: fipclimate
+username: lilyzzhao
+account: lilyzzhao
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10803810
+bundleId: 8052260
+url: https://lilyzzhao.shinyapps.io/fipclimate/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
