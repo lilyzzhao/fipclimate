@@ -3,7 +3,8 @@ library(plotly)
 library(tidyverse)
 library(readr)
 
-
+# line break in hover text: <br />
+# bold <b>
 ################UI
 
 ui <- fluidPage(
@@ -179,7 +180,11 @@ server <- function(input, output, session) {
   
   # Load the data for the Attribute Coverage plot (first tab)
   coverage_df <- read_csv("coverage_plot.csv")
-  
+  #you were using the wrong bold code <strong> needed to be <b>
+  coverage_df$hover_rationale= paste0("<b>", coverage_df$hover_tile, "</b>", coverage_df$hover_rationale)
+  # change the number in strwrap(x, 20) to desired character width
+  coverage_df <- coverage_df %>%
+    mutate(hover_rationale = sapply(hover_rationale, function(x) paste(strwrap(x, 30), collapse = "<br>")))
   
   filtered_coverage_data <- reactive({
     filtered_df <- coverage_df
@@ -208,7 +213,7 @@ server <- function(input, output, session) {
     
     #the coverage plot
     
-    p <- ggplot(data, aes(x = assessment, y = attribute, fill = coverage_factor, text = hover_tile)) +
+    p <- ggplot(data, aes(x = assessment, y = attribute, fill = coverage_factor, text = hover_rationale)) +
       geom_tile(color = "white", width = 0.3, height = 1) +
       scale_fill_manual(values = c("Missing" = "#F21A00", "Weak coverage" = "#E1AF00", "Medium coverage" = "#78B7C5", "Strong coverage" = "#3B9AB2")) +
       theme_minimal() +
