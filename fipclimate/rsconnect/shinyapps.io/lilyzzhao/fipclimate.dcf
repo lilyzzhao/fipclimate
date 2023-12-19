@@ -5,7 +5,7 @@ account: lilyzzhao
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10803810
-bundleId: 8063271
+bundleId:
 url: https://lilyzzhao.shinyapps.io/fipclimate/
 version: 1
 asMultiple: FALSE

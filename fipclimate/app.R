@@ -11,13 +11,13 @@ ui <- fluidPage(
   # Application title
   titlePanel("Do FIP Assessments Evaluate Climate Resilience?"),
   
-  HTML("<p>Fishery Improvement Projects (FIPs) enhance fishery performance by first assessing the environmental sustainability and sometimes the social responsibility of a fishery. These assessments are used to develop workplans that address related challenges. In the context of increasing climate risk, alongside the goals of environmental sustainability and social responsibility, climate resilience — the ability to cope, adapt, and transform in the face of climate impacts — is critical to fishery performance.</p>"),
+  HTML("<p>Fishery Improvement Projects (FIPs) enhance fishery performance by first assessing the environmental sustainability and sometimes the social responsibility of a fishery. These assessments are used to develop workplans that address associated challenges. In the context of increasing climate risk, alongside the goals of environmental sustainability and social responsibility, climate resilience — the ability to cope, adapt, and transform in the face of climate impacts — is critical to fishery performance.</p>"),
   
   HTML("<p><strong>On the tabs below, explore the effectiveness of existing assessment tools for FIPs in capturing the climate resilience of a fishery system.</strong></p>"),
   
   HTML("<p>Here we explore two primary tools — the Environmental Rapid Assessment (ERA) for basic FIPs and the Social Responsibility Assessment (SRA) — and the extent to which they consider attributes of climate resilience as defined for fishery systems in Mason et al. 2022, separately and when used in combination.</p>"),
   
-  HTML("<p>This interface allows users to see how indicators that promote environmental sustainability through the ERA and social responsibility through the SRA can also help build climate resilience in a fishery. It also identifies gaps (attributes of climate resilience not considered by indicators in either assessment). Assessing and promoting these attributes may foster resilient improvement projects and enhance fishery progress under increasing uncertainty.</p>"),
+  HTML("<p>This interface allows users to see how indicators that promote environmental sustainability through the ERA and social responsibility through the SRA can also help build climate resilience in a fishery, by linking the work of a SNAPP Working Group (refer to climateresilientfisheries.net) to the FIP space (refer to fisheriesprogress.org). It also identifies gaps (attributes of climate resilience not considered by indicators in either assessment). Assessing and promoting these attributes may foster resilient improvement projects and enhance fishery progress under increasing uncertainty.</p>"),
   
   # Tabs for different visualizations
   tabsetPanel(
