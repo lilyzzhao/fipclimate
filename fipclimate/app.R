@@ -171,7 +171,6 @@ server <- function(input, output, session) {
         source = links$source,
         target = links$target,
         value = links$weight
-        #color = color_map[links$weight_label]  # Apply color based on weight_label
         #  custom hover text settings would go here if they worked
       )
     )
@@ -180,11 +179,14 @@ server <- function(input, output, session) {
   
   # Load the data for the Attribute Coverage plot (first tab)
   coverage_df <- read_csv("coverage_plot.csv")
+  coverage_df$hover_rationale[is.na(coverage_df$hover_rationale)] = " "
   #you were using the wrong bold code <strong> needed to be <b>
   coverage_df$hover_rationale= paste0("<b>", coverage_df$hover_tile, "</b>", coverage_df$hover_rationale)
   # change the number in strwrap(x, 20) to desired character width
   coverage_df <- coverage_df %>%
     mutate(hover_rationale = sapply(hover_rationale, function(x) paste(strwrap(x, 30), collapse = "<br>")))
+  
+
   
   filtered_coverage_data <- reactive({
     filtered_df <- coverage_df
