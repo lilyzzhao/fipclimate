@@ -178,7 +178,7 @@ server <- function(input, output, session) {
   
   
   # Load the data for the Attribute Coverage plot (first tab)
-  coverage_df <- read_csv("coverage_plot.csv")
+  coverage_df <- read_csv("coverage_jan.csv")
   coverage_df$hover_rationale[is.na(coverage_df$hover_rationale)] = " "
   #you were using the wrong bold code <strong> needed to be <b>
   coverage_df$hover_rationale= paste0("<b>", coverage_df$hover_tile, "</b>", coverage_df$hover_rationale)
@@ -198,6 +198,7 @@ server <- function(input, output, session) {
     return(filtered_df)
   })
   
+  library(forcats)
   
   # Render the Attribute Coverage plot
   output$coveragePlot <- renderPlotly({
@@ -208,6 +209,7 @@ server <- function(input, output, session) {
       mutate(
         att_dimension = fct_relevel(att_dimension, "Ecological", "Governance", "Socio-economic"),
         assessment = fct_relevel(assessment, "ERA", "SRA", "ERA + SRA"),
+        attribute = fct_rev(attribute),  # Reversing the order of attribute
         coverage_factor = factor(coverage, 
                                  levels = 0:3,
                                  labels = c("Missing", "Weak coverage", "Medium coverage", "Strong coverage"))
@@ -229,6 +231,8 @@ server <- function(input, output, session) {
         axis.ticks.x = element_blank(),
         legend.position = "bottom"
       )
+    
+    
     #making it interactive
     ggplotly(p, tooltip = "text")
     
@@ -240,6 +244,7 @@ server <- function(input, output, session) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
+
 
 
 
