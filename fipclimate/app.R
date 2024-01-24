@@ -80,13 +80,13 @@ ui <- fluidPage(
                      # Second header for the legend
                      div(class = "legend-header", "Attributes of Climate Resilience"),
                      div(class = "legend-item", 
-                         span(class = "legend-color", style = "background-color: #2c9f51;"), 
+                         span(class = "legend-color", style = "background-color: #71AD47;"), 
                          span(class = "legend-text", "Ecological Resilience of Stock, Habitats and Ecosystem")),
                      div(class = "legend-item", 
-                         span(class = "legend-color", style = "background-color: #Be213c;"), 
+                         span(class = "legend-color", style = "background-color: #5C9BD5;"), 
                          span(class = "legend-text", "Governance Resilience of Fishery Operations & Management")),
                      div(class = "legend-item", 
-                         span(class = "legend-color", style = "background-color: #Cd9827;"), 
+                         span(class = "legend-color", style = "background-color: #FFC000;"), 
                          span(class = "legend-text", "Socio-economic Resilience for Fishers and Fishing Community")),
                      style = "padding: 10px 0;"
                  )
@@ -114,10 +114,11 @@ server <- function(input, output, session) {
   links_df <- read_csv("p_links.csv", show_col_types = FALSE)
   nodes_df <- read_csv("p_nodes.csv", show_col_types = FALSE)
   
+  
   # Define colors for groups
-  group_colors <- c("Ecological" = "#2c9f51",
-                    "Governance" = "#Be213c",
-                    "Socio-economic" = "#Cd9827",
+  group_colors <- c("Ecological" = "#71AD47",
+                    "Governance" = "#5C9BD5",
+                    "Socio-economic" = "#FFC000",
                     "ERA" = "#007a7c",
                     "SRA" = "#4169e1")
   
@@ -125,6 +126,8 @@ server <- function(input, output, session) {
   nodes_df$color <- group_colors[nodes_df$group]
   # Fill any NAs with a default color
   nodes_df$color[is.na(nodes_df$color)] <- "#cccccc"
+  
+  
   
   # Reactive expression for filtered data for the Sankey plot
   filtered_sankey_data <- reactive({
